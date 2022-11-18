@@ -10,9 +10,12 @@ import {
   MenuItem,
   useDisclosure,
   useToast,
+  IconButton,
+  ButtonGroup,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { HamburgerIcon, } from '@chakra-ui/icons';
 function WithAction() {
   const toast = useToast();
   const route = useRouter();
@@ -28,6 +31,7 @@ function WithAction() {
         background="teal"
         w="100%"
         color="#fff"
+       
       >
         <Flex
           h="70px"
@@ -36,8 +40,13 @@ function WithAction() {
           m="auto"
           justifyContent="space-between"
         >
-          <Flex>
+          <Flex padding='12px'>
+            <ButtonGroup gap='2' marginRight='10px'>
+            <IconButton aria-label={'HamburgerIcon'} icon={<HamburgerIcon/>} colorScheme='teal' fontSize='20pt' variant='outline' background='teal' />
+            </ButtonGroup> 
+           
             <Link href="/">
+
               <Text
                 color="#FFFFFF"
                 size="lg"
@@ -49,13 +58,13 @@ function WithAction() {
               </Text>
             </Link>
 
-            <Link href="/customers">
+            <Link href="/">
               <Text mr="8px" color="#FFFFFF" cursor="pointer">
                 Quem Sou
               </Text>
             </Link>
 
-            <Link href="/calendar">
+            <Link href="/">
               <Text color="#FFFFFF" cursor="pointer">
                 Como foi feito
               </Text>
