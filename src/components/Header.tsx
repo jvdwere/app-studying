@@ -1,5 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Input,
   Box,
   Flex,
   Button,
@@ -12,13 +20,16 @@ import {
   useToast,
   IconButton,
   ButtonGroup,
-} from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { HamburgerIcon, } from '@chakra-ui/icons';
+  useMergeRefs,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { HamburgerIcon } from "@chakra-ui/icons";
 function WithAction() {
   const toast = useToast();
   const route = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
     <>
@@ -30,9 +41,7 @@ function WithAction() {
         right="0"
         background="teal"
         w="100%"
-        color="#fff"
-       
-      >
+        color="#fff">
         <Flex
           h="70px"
           alignItems="center"
@@ -40,13 +49,20 @@ function WithAction() {
           m="auto"
           justifyContent="space-between"
         >
-          <Flex padding='12px'>
-            <ButtonGroup gap='2' marginRight='10px'>
-            <IconButton aria-label={'HamburgerIcon'} icon={<HamburgerIcon/>} colorScheme='teal' fontSize='20pt' variant='outline' background='teal' />
-            </ButtonGroup> 
-           
-            <Link href="/">
+          <Flex padding="12px">
+            <ButtonGroup gap="2" marginRight="10px">
+              <IconButton
+                aria-label={"HamburgerIcon"}
+                icon={<HamburgerIcon />}
+                colorScheme="teal"
+                fontSize="20pt"
+                variant="outline"
+                background="teal"
+              />
+            </ButtonGroup>
 
+            <Link href="/">
+              
               <Text
                 color="#FFFFFF"
                 size="lg"
@@ -71,9 +87,7 @@ function WithAction() {
             </Link>
           </Flex>
           <Flex>
-            <Menu>
-              
-            </Menu>
+            
           </Flex>
         </Flex>
       </Box>
