@@ -23,7 +23,7 @@ function Layout({ children }: ILayout) {
     <>
       <Header />
 
-      <Box w={{ base: '100%', sm: '100%', xl: '1280px' }} margin="auto">
+      <Box w={{ base: '100%', sm: '100%', xl: '1280px' }}  margin="auto">
         <Box w="100%" mt="100px">
           {children}
         </Box>

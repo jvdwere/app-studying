@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Layouty from "../../components/Layouty";
 import {
   Box,
@@ -11,7 +12,108 @@ import {
   Select,
 } from "@chakra-ui/react";
 
-const Respostas = () => {
+
+
+function Respostas() {
+
+  const [estado, setEstado]= useState()
+  const [res, setRes]= useState([])
+    
+  
+
+  const handleClick=()=> {
+
+   
+    if (estado === 'SP') {
+      res 'Você é Paulista!'
+  }
+  if (estado === 'RJ') {
+      res.innerHTML += 'Você é Carioca!'
+  }
+  if (estado === 'RS') {
+      res.innerHTML += 'Você é Gaúcho!'
+  }
+  if (estado === 'AM') {
+      res.innerHTML += 'Você é Amazonense!'
+  }
+  if (estado === 'AC') {
+      res.innerHTML += 'Você é Acriano!'
+  }
+  if (estado === 'AL') {
+      res.innerHTML += 'Você é Alagoano!'
+  }
+  if (estado === 'AP') {
+      res.innerHTML += 'Você é Amapaense!'
+  }
+  if (estado === 'BA') {
+      res.innerHTML += 'Você é Baiano!'
+  }
+  if (estado === 'CE') {
+      res.innerHTML += 'Você é Cearense!'
+  }
+  if (estado === 'DF') {
+      res.innerHTML += 'Você é Brasiliense!'
+  }
+  if (estado === 'ES') {
+      res.innerHTML += 'Você é Capixaba!'
+  }
+  if (estado === 'GO') {
+      res.innerHTML += 'Você é Goiano!'
+  }
+  if (estado === 'MA') {
+      res.innerHTML += 'Você é Maranhense!'
+  }
+  if (estado === 'MT') {
+      res.innerHTML += 'Você é Mato-grossense!'
+  }
+  if (estado === 'MS') {
+      res.innerHTML += 'Você é Sul-mato-grossense'
+  }
+  if (estado === 'MG') {
+      res.innerHTML += 'Você é Mineiro!'
+  }
+  if (estado === 'PA') {
+      res.innerHTML += 'Você é Paraense!'
+  }
+  if (estado === 'PB') {
+      res.innerHTML += 'Você é Paraibano!'
+  }
+  if (estado === 'PR') {
+      res.innerHTML += 'Você é Paranaense!'
+  }
+  if (estado === 'PE') {
+      res.innerHTML += 'Você é Pernambucano!'
+  }
+  if (estado === 'PI') {
+      res.innerHTML += 'Você é Piauiense!'
+  }
+  if (estado === 'RN') {
+      res.innerHTML += 'Você é Potiguara!'
+  }
+  if (estado === 'RO') {
+      res.innerHTML += 'Você é Rondoniano!'
+  }
+  if (estado === 'RR') {
+      res.innerHTML += 'Você é Roraimense!'
+  }
+  if (estado === 'SC') {
+      res.innerHTML += 'Você é Catarinense!'
+  }
+  if (estado === 'SE') {
+      res.innerHTML += 'Você é Sergipano!'
+  }
+  if (estado === 'TO') {
+      res.innerHTML = 'Você é Tocantinense!'
+  } else if(estado === '') {
+      alert('[ERRO] Selecione um estado!')
+  };
+      
+  }
+  
+
+ 
+
+
   return (
     <>
       <Layouty>
@@ -19,29 +121,17 @@ const Respostas = () => {
           <Box w="100%" textAlign="center" fontSize="22pt">
             Respostas Obvias Para Perguntas que Ninguem Fez.
           </Box>
-          <Box
-            bg="#8C7478"
-            w="100%"
-            h="100vh"
-            p={{ base: "40px 20px 0 20px", md: "100px 0 0 0" }}
-          >
-            <Box
-              borderRadius="10px"
-              bg="#fff"
-              p="20px"
-              w={{ base: "100%", md: "400px" }}
-              m="0px auto"
-            >
+          <Box>
+            <Box>
               <FormLabel textAlign="center">
                 <Box p="16px" fontSize="18pt">
                   Naturalidades do Brasil.
                 </Box>
-                <FormLabel fontSize="16pt">
-                  Em que estado vc nasceu?
-                </FormLabel>
+                <FormLabel fontSize="16pt">Em que estado vc nasceu?</FormLabel>
                 <Flex>
                   <Flex>
-                    <Select placeholder="Selecione um Estado" width="200px">
+                    <Select name="select" placeholder="Selecione um Estado" onChange= {(e) => {setEstado(e.target.value)}}> 
+                    
                       <option value="AM">Amazonas</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -70,9 +160,12 @@ const Respostas = () => {
                       <option value="TO">Tocantins</option>
                     </Select>
                   </Flex>
-                  <Button>Verificar</Button>
+                  <Button onClick={handleClick}>Verificar</Button>
                 </Flex>
-                <FormLabel id="res" />
+                
+                <FormLabel id='res'/>
+                  
+                
                 Foto
               </FormLabel>
             </Box>
@@ -84,6 +177,6 @@ const Respostas = () => {
       </Layouty>
     </>
   );
-};
+}
 
 export default Respostas;

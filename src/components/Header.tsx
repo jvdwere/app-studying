@@ -1,5 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Input,
   Box,
   Flex,
   Button,
@@ -10,12 +18,18 @@ import {
   MenuItem,
   useDisclosure,
   useToast,
-} from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+  IconButton,
+  ButtonGroup,
+  useMergeRefs,
+} from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { HamburgerIcon } from "@chakra-ui/icons";
 function WithAction() {
   const toast = useToast();
   const route = useRouter();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
     <>
@@ -27,8 +41,7 @@ function WithAction() {
         right="0"
         background="teal"
         w="100%"
-        color="#fff"
-      >
+        color="#fff">
         <Flex
           h="70px"
           alignItems="center"
@@ -36,8 +49,20 @@ function WithAction() {
           m="auto"
           justifyContent="space-between"
         >
-          <Flex>
+          <Flex padding="12px">
+            <ButtonGroup gap="2" marginRight="10px">
+              <IconButton
+                aria-label={"HamburgerIcon"}
+                icon={<HamburgerIcon />}
+                colorScheme="teal"
+                fontSize="20pt"
+                variant="outline"
+                background="teal"
+              />
+            </ButtonGroup>
+
             <Link href="/">
+              
               <Text
                 color="#FFFFFF"
                 size="lg"
@@ -49,22 +74,20 @@ function WithAction() {
               </Text>
             </Link>
 
-            <Link href="/customers">
+            <Link href="/">
               <Text mr="8px" color="#FFFFFF" cursor="pointer">
                 Quem Sou
               </Text>
             </Link>
 
-            <Link href="/calendar">
+            <Link href="/">
               <Text color="#FFFFFF" cursor="pointer">
                 Como foi feito
               </Text>
             </Link>
           </Flex>
           <Flex>
-            <Menu>
-              
-            </Menu>
+            
           </Flex>
         </Flex>
       </Box>
