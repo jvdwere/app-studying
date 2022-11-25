@@ -41,14 +41,9 @@ function WithAction() {
         right="0"
         background="teal"
         w="100%"
-        color="#fff">
-        <Flex
-          h="70px"
-          alignItems="center"
-          p="0 20px"
-          m="auto"
-          justifyContent="space-between"
-        >
+        color="#fff"
+      >
+        <Flex h="70px" alignItems="center" p="0 20px" m="auto">
           <Flex padding="12px">
             <ButtonGroup gap="2" marginRight="10px">
               <IconButton
@@ -62,7 +57,6 @@ function WithAction() {
             </ButtonGroup>
 
             <Link href="/">
-              
               <Text
                 color="#FFFFFF"
                 size="lg"
@@ -74,21 +68,25 @@ function WithAction() {
               </Text>
             </Link>
 
-            <Link href="/">
-              <Text mr="8px" color="#FFFFFF" cursor="pointer">
+            <Link href="/About">
+              <Text mr="8px" color="#FFFFFF" cursor="pointer" marginLeft="12px">
                 Quem Sou
               </Text>
             </Link>
 
-            <Link href="/">
-              <Text color="#FFFFFF" cursor="pointer">
+            <Link href="/WasMade">
+              <Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
                 Como foi feito
               </Text>
             </Link>
+
+            <Link href="/Answers">
+              <Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
+                Naturalidades Brasileiras
+              </Text>
+            </Link>
           </Flex>
-          <Flex>
-            
-          </Flex>
+          <Flex></Flex>
         </Flex>
       </Box>
     </>

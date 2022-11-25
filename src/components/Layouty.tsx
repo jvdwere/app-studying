@@ -1,6 +1,6 @@
-import { Box } from '@chakra-ui/react';
-import Header from './Header';
-import React from 'react';
+import { Box, Container } from "@chakra-ui/react";
+import Header from "./Header";
+import React from "react";
 
 interface ItemBreadcrumb {
   isCurrentPage?: boolean;
@@ -21,13 +21,12 @@ interface ILayout {
 function Layout({ children }: ILayout) {
   return (
     <>
-      <Header />
-
-      <Box w={{ base: '100%', sm: '100%', xl: '1280px' }}  margin="auto">
-        <Box w="100%" mt="100px">
-          {children}
+      
+        <Header />
+        <Box h='100%' w='100%' mt="100px">
+          <Box h='100%' w='100%' mt="100px">{children}</Box>
         </Box>
-      </Box>
+      
     </>
   );
 }
