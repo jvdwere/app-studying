@@ -1,3 +1,3 @@
-import Page from "../../src/modules/Answers/answers"
+import Page from "../../src/modules/Answers"
 
 export default Page; 
