@@ -1,6 +1,6 @@
 import { Box, ChakraProvider, Image } from "@chakra-ui/react";
 import React from "react";
-import Layouty from "../components/Layouty";
+import Layouty from "../components/Layout";
 
 const Home = () => {
   return (

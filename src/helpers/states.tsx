@@ -6,32 +6,105 @@ export const statesList = [
   {
     stateValue: 'AL',
     state:'Alagoas'
-  }
+  },
+  {
+    stateValue: 'AP',
+    state:'Amapá'
+  },
+  {
+    stateValue: 'AM',
+    state:'Amazonas'
+  },
+  {
+    stateValue: 'BA',
+    state:'Bahia'
+  },
+  {
+    stateValue: 'CE',
+    state:'Ceará'
+  },
+  {
+    stateValue: 'DF',
+    state:'Distrito Federal'
+  },
+  {
+    stateValue: 'ES',
+    state:'Espírito Santo'
+  },
+  {
+    stateValue: 'GO',
+    state:'Goiás'
+  },
+  {
+    stateValue: 'MA',
+    state:'Maranhão'
+  },
+  {
+    stateValue: 'MT',
+    state:'Mato Grosso'
+  },
+  {
+    stateValue: 'MS',
+    state:'Mato Grosso do Sul'
+  },
+  {
+    stateValue: 'MG',
+    state:'Minas Gerais'
+  },
+  {
+    stateValue: 'PA',
+    state:'Pará'
+  },
+  {
+    stateValue: 'PR',
+    state:'Paraná'
+  },
+  {
+    stateValue: 'PB',
+    state:'Paraíba'
+  },
+  {
+    stateValue: 'PE',
+    state:'Pernambuco'
+  },
+  {
+    stateValue: 'PI',
+    state:'Piauí'
+  },
+  {
+    stateValue: 'RJ',
+    state:'Rio de Janeiro'
+  },
+  {
+    stateValue: 'RS',
+    state:'o Sul'
+  },
+  {
+    stateValue: 'RN',
+    state:'Rio Grande do Norte'
+  },
+  {
+    stateValue: 'RO',
+    state:'Rondônia'
+  },
+  {
+    stateValue: 'RR',
+    state:'Roraima'
+  },
+  {
+    stateValue: 'SC',
+    state:'Santa Catarina'
+  },
+  {
+    stateValue: 'SP',
+    state:'São Paulo'
+  },
+  {
+    stateValue: 'SE',
+    state:'Sergipe'
+  },
+  {
+    stateValue: 'TO',
+    state:'Tocantins'
+  },
 ];
-
-{/* <option value="AM">Amazonas</option>
-											<option value="AC">Acre</option>
-											<option value="AL">Alagoas</option>
-											<option value="AP">Amapá</option>
-											<option value="BA">Bahia</option>
-											<option value="CE">Ceara</option>
-											<option value="DF">Distrito Federal</option>
-											<option value="ES">Espirito Santo</option>
-											<option value="GO">Goiás</option>
-											<option value="MA">Maranhão</option>
-											<option value="MT">Mato Grosso</option>
-											<option value="MG">Minas Gerais</option>
-											<option value="PA">Pará</option>
-											<option value="PR">Paraná</option>
-											<option value="PB">Paraíba</option>
-											<option value="PE">Pernambuco</option>
-											<option value="PI">Piauí</option>
-											<option value="RJ">Rio de Janeiro</option>
-											<option value="RS">Rio Grande do Sul</option>
-											<option value="RN">Rio Grande do Norte</option>
-											<option value="RO">Rondônia</option>
-											<option value="RR">Roraima</option>
-											<option value="SC">Santa Catarina</option>
-											<option value="SP">São Paulo</option>
-											<option value="SE">Sergipe</option>
-											<option value="TO">Tocantins</option> */}

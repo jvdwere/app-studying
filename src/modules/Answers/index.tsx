@@ -16,6 +16,10 @@ import {
 	AlertDescription,
 	Container,
 	Heading,
+	Card, 
+	CardHeader, 
+	CardBody, 
+	CardFooter
 } from '@chakra-ui/react';
 import { statesList } from '../../helpers/states';
 
@@ -121,11 +125,12 @@ function Respostas() {
 				</Box>
 				<Box w="100%">
 					<Box>
-						<FormLabel textAlign="center">
+						<FormLabel>
+							
 							<Box p="16px" fontSize="18pt">
 								Naturalidades do Brasil.
 							</Box>
-							<FormLabel fontSize="16pt" textAlign="center">
+							<FormLabel fontSize="16pt" >
 								Em que estado vc nasceu?
 							</FormLabel>
 							<Flex
@@ -149,37 +154,10 @@ function Respostas() {
 												</option>
 											</>
 										))}
-
-										{/* <option value="AM">Amazonas</option>
-											<option value="AC">Acre</option>
-											<option value="AL">Alagoas</option>
-											<option value="AP">Amapá</option>
-											<option value="BA">Bahia</option>
-											<option value="CE">Ceara</option>
-											<option value="DF">Distrito Federal</option>
-											<option value="ES">Espirito Santo</option>
-											<option value="GO">Goiás</option>
-											<option value="MA">Maranhão</option>
-											<option value="MT">Mato Grosso</option>
-											<option value="MG">Minas Gerais</option>
-											<option value="PA">Pará</option>
-											<option value="PR">Paraná</option>
-											<option value="PB">Paraíba</option>
-											<option value="PE">Pernambuco</option>
-											<option value="PI">Piauí</option>
-											<option value="RJ">Rio de Janeiro</option>
-											<option value="RS">Rio Grande do Sul</option>
-											<option value="RN">Rio Grande do Norte</option>
-											<option value="RO">Rondônia</option>
-											<option value="RR">Roraima</option>
-											<option value="SC">Santa Catarina</option>
-											<option value="SP">São Paulo</option>
-											<option value="SE">Sergipe</option>
-											<option value="TO">Tocantins</option> */}
 									</Select>
 								</Flex>
 
-								<Flex mt={{ base: '8px', md: '0px' }}>
+								<Flex mt={{ base: '8px', md: '0px' }} alignItems='center'>
 									<Button mr="8px" colorScheme="teal" onClick={handleClick}>
 										Verificar
 									</Button>

@@ -71,7 +71,7 @@ function WithAction() {
 								</Text>
 							</Link>
 
-							<Link href="/About">
+							<Link href="/about">
 								<Text
 									mr="8px"
 									color="#FFFFFF"
@@ -82,13 +82,13 @@ function WithAction() {
 								</Text>
 							</Link>
 
-							<Link href="/WasMade">
+							<Link href="/wasMade">
 								<Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
 									Como foi feito
 								</Text>
 							</Link>
 
-							<Link href="/Answers">
+							<Link href="/answers">
 								<Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
 									Naturalidades Brasileiras
 								</Text>
