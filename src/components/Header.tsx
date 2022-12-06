@@ -78,7 +78,7 @@ function WithAction() {
 										</Text>
 									</Link>
 									
-									<Link href="/answers" >
+									<Link href="/cars" >
 										<Text cursor="pointer" marginLeft="12px">
 											<Button leftIcon={<GiBrazil />}> Carros </Button>
 										</Text>
