@@ -23,7 +23,7 @@ function Layout({ children }: ILayout) {
 		<>
 			<Header />
 			<Box h='100%' w="100%" mt="70px">
-				<Box background="#efefefef" h="100%" w="100%">
+				<Box background="#DDFFE7" h="100%" w="100%">
 					{children}
 				</Box>
 				<Box w="100%" p="8px" bgColor="#F9E5E1">

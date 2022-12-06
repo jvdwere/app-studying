@@ -24,7 +24,10 @@ import {
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { HamburgerIcon } from '@chakra-ui/icons';
+import { EmailIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { GiBrazil } from 'react-icons/gi';
+
+
 function WithAction() {
 	const toast = useToast();
 	const route = useRouter();
@@ -45,18 +48,48 @@ function WithAction() {
 			>
 				<Flex h="70px" alignItems="center" p="0 20px" m="auto">
 					<Flex alignItems="center" padding="12px">
-						<Box display={{ base: 'flex', md: 'none' }}>
-							<ButtonGroup gap="2" marginRight="10px">
-								<IconButton
-									aria-label={'HamburgerIcon'}
-									icon={<HamburgerIcon />}
-									colorScheme="teal"
-									fontSize="20pt"
-									variant="outline"
-									background="white"
-								/>
-							</ButtonGroup>
-						</Box>
+
+
+						<ButtonGroup gap="2" marginRight="10px" ref={btnRef} colorScheme='teal' onClick={onOpen}>
+							<IconButton
+								aria-label={'HamburgerIcon'}
+								icon={<HamburgerIcon />}
+								colorScheme="teal"
+								fontSize="20pt"
+								variant="outline"
+								color="white"
+							/>
+						</ButtonGroup>
+						<Drawer
+							isOpen={isOpen}
+							placement='left'
+							onClose={onClose}
+							finalFocusRef={btnRef}
+						>
+							<DrawerOverlay />
+							<DrawerContent>
+								<DrawerCloseButton />
+								<DrawerHeader>Paginas</DrawerHeader>
+
+								<DrawerBody>
+									<Link href="/answers" >
+										<Text cursor="pointer" marginLeft="12px">
+											<Button leftIcon={<GiBrazil />}> Naturalidades Brasileiras </Button>
+										</Text>
+									</Link>
+									
+									<Link href="/answers" >
+										<Text cursor="pointer" marginLeft="12px">
+											<Button leftIcon={<GiBrazil />}> Carros </Button>
+										</Text>
+									</Link>
+								</DrawerBody>
+								<DrawerFooter>
+
+								</DrawerFooter>
+							</DrawerContent>
+						</Drawer>
+
 
 						<Flex display={{ base: 'none', md: 'flex' }}>
 							<Link href="/">
@@ -88,11 +121,7 @@ function WithAction() {
 								</Text>
 							</Link>
 
-							<Link href="/answers">
-								<Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
-									Naturalidades Brasileiras
-								</Text>
-							</Link>
+
 						</Flex>
 					</Flex>
 				</Flex>
