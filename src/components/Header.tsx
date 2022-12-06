@@ -96,6 +96,18 @@ function WithAction() {
 										</Text>
 									</Link>
 									<hr />
+									<Link href="/" >
+										<Text cursor="pointer" marginLeft="12px" marginTop='8px' >
+											<Button
+												// leftIcon={}
+												variant='ghost'
+											>
+												NewPG
+											</Button>
+										</Text>
+									</Link>
+									<hr />
+
 								</DrawerBody>
 								<DrawerFooter>
 
