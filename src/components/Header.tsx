@@ -26,6 +26,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { EmailIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { GiBrazil } from 'react-icons/gi';
+import { FaCar } from 'react-icons/fa';
 
 
 function WithAction() {
@@ -69,20 +70,32 @@ function WithAction() {
 							<DrawerOverlay />
 							<DrawerContent>
 								<DrawerCloseButton />
-								<DrawerHeader>Paginas</DrawerHeader>
+								<DrawerHeader textAlign='center'>Paginas</DrawerHeader>
+								<hr />
 
 								<DrawerBody>
 									<Link href="/answers" >
 										<Text cursor="pointer" marginLeft="12px">
-											<Button leftIcon={<GiBrazil />}> Naturalidades Brasileiras </Button>
+											<Button
+												leftIcon={<GiBrazil />}
+												variant='ghost'
+											>
+												Naturalidades Brasileiras
+											</Button>
 										</Text>
 									</Link>
-									
+									<hr />
 									<Link href="/cars" >
-										<Text cursor="pointer" marginLeft="12px">
-											<Button leftIcon={<GiBrazil />}> Carros </Button>
+										<Text cursor="pointer" marginLeft="12px" marginTop='8px' >
+											<Button
+												leftIcon={<FaCar />}
+												variant='ghost'
+											>
+												Carros
+											</Button>
 										</Text>
 									</Link>
+									<hr />
 								</DrawerBody>
 								<DrawerFooter>
 
@@ -99,6 +112,7 @@ function WithAction() {
 									fontWeight="bold"
 									cursor="pointer"
 									mr="30px"
+
 								>
 									Meu Inestimável App
 								</Text>
