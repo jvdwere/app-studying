@@ -96,13 +96,13 @@ function WithAction() {
 										</Text>
 									</Link>
 									<hr />
-									<Link href="/" >
+									<Link href="/presence-list" >
 										<Text cursor="pointer" marginLeft="12px" marginTop='8px' >
 											<Button
-												// leftIcon={}
+												
 												variant='ghost'
 											>
-												NewPG
+												Lista de Presença
 											</Button>
 										</Text>
 									</Link>
