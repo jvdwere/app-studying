@@ -7,24 +7,18 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
-	Input,
 	Box,
 	Flex,
 	Button,
 	Text,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
 	useDisclosure,
 	useToast,
 	IconButton,
 	ButtonGroup,
-	useMergeRefs,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { EmailIcon, HamburgerIcon } from '@chakra-ui/icons';
+import {  HamburgerIcon } from '@chakra-ui/icons';
 import { GiBrazil } from 'react-icons/gi';
 import { FaCar } from 'react-icons/fa';
 
@@ -116,7 +110,7 @@ function WithAction() {
 						</Drawer>
 
 
-						<Flex display={{ base: 'none', md: 'flex' }}>
+						<Flex>
 							<Link href="/">
 								<Text
 									color="#FFFFFF"
@@ -129,7 +123,8 @@ function WithAction() {
 									Meu Inestimável App
 								</Text>
 							</Link>
-
+						</Flex>
+						<Flex display={{ base: 'none', md: 'flex' }}>
 							<Link href="/about">
 								<Text
 									mr="8px"
@@ -142,7 +137,11 @@ function WithAction() {
 							</Link>
 
 							<Link href="/wasMade">
-								<Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
+								<Text
+									color="#FFFFFF"
+									cursor="pointer"
+									marginLeft="12px"
+								>
 									Como foi feito
 								</Text>
 							</Link>

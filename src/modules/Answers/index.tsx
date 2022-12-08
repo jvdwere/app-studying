@@ -4,24 +4,14 @@ import Layout from '../../components/Layout';
 import {
 	Box,
 	Button,
-	ChakraProvider,
 	Flex,
-	FormControl,
 	FormLabel,
-	Input,
 	Select,
-	Alert,
-	AlertIcon,
-	AlertTitle,
-	AlertDescription,
-	Container,
 	Heading,
 	Card,
 	CardHeader,
 	CardBody,
-	CardFooter,
 	Image,
-	Center,
 } from '@chakra-ui/react';
 import { statesList } from '../../helpers/states';
 
