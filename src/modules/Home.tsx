@@ -8,7 +8,7 @@ const Home = () => {
       <ChakraProvider>
         
           <Box>
-            hello 
+            Home
           </Box>
         
       </ChakraProvider>
