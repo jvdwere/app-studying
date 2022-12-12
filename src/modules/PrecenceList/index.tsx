@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
+import Clock from "../../components/Clock"
 
 export default function Presence() {
   const [userRegister, setUserRegister] = useState({
@@ -97,6 +98,7 @@ export default function Presence() {
                       <Button type="button" onClick={() => setUserList([])} marginLeft='4px'>
                         Apagar Todos
                       </Button>
+                      <Clock />
                     </Flex>
                   </Flex>
 
@@ -127,7 +129,7 @@ export default function Presence() {
                   <ul>
                     {userList &&
                       filter(userList).map((x) => (
-                        <Box >
+                        <Box>
                           <li>
                             {x.user}                           
                             <Button onClick={() => handleDelete(x.user)} ml='15px' >
