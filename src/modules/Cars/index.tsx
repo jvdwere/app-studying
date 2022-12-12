@@ -1,14 +1,17 @@
-import { Box, ChakraProvider} from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import React from "react";
-import Layouty from "../components/Layout";
+import Layouty from "../../components/Layout";
 
-const Home = () => {
+const Cars = () => {
+
+
   return (
+    
     <Layouty>
       <ChakraProvider>
         
           <Box>
-            Home
+            cars
           </Box>
         
       </ChakraProvider>
@@ -16,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Cars;

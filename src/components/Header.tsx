@@ -7,25 +7,20 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
-	Input,
 	Box,
 	Flex,
 	Button,
 	Text,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
 	useDisclosure,
 	useToast,
 	IconButton,
 	ButtonGroup,
-	useMergeRefs,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { EmailIcon, HamburgerIcon } from '@chakra-ui/icons';
+import {  HamburgerIcon } from '@chakra-ui/icons';
 import { GiBrazil } from 'react-icons/gi';
+import { FaCar } from 'react-icons/fa';
 
 
 function WithAction() {
@@ -69,20 +64,44 @@ function WithAction() {
 							<DrawerOverlay />
 							<DrawerContent>
 								<DrawerCloseButton />
-								<DrawerHeader>Paginas</DrawerHeader>
+								<DrawerHeader textAlign='center'>Paginas</DrawerHeader>
+								<hr />
 
 								<DrawerBody>
 									<Link href="/answers" >
 										<Text cursor="pointer" marginLeft="12px">
-											<Button leftIcon={<GiBrazil />}> Naturalidades Brasileiras </Button>
+											<Button
+												leftIcon={<GiBrazil />}
+												variant='ghost'
+											>
+												Naturalidades Brasileiras
+											</Button>
 										</Text>
 									</Link>
-									
-									<Link href="/answers" >
-										<Text cursor="pointer" marginLeft="12px">
-											<Button leftIcon={<GiBrazil />}> Carros </Button>
+									<hr />
+									<Link href="/cars" >
+										<Text cursor="pointer" marginLeft="12px" marginTop='8px' >
+											<Button
+												leftIcon={<FaCar />}
+												variant='ghost'
+											>
+												Carros
+											</Button>
 										</Text>
 									</Link>
+									<hr />
+									<Link href="/presence-list" >
+										<Text cursor="pointer" marginLeft="12px" marginTop='8px' >
+											<Button
+												
+												variant='ghost'
+											>
+												Lista de Presença
+											</Button>
+										</Text>
+									</Link>
+									<hr />
+
 								</DrawerBody>
 								<DrawerFooter>
 
@@ -91,7 +110,7 @@ function WithAction() {
 						</Drawer>
 
 
-						<Flex display={{ base: 'none', md: 'flex' }}>
+						<Flex>
 							<Link href="/">
 								<Text
 									color="#FFFFFF"
@@ -99,11 +118,13 @@ function WithAction() {
 									fontWeight="bold"
 									cursor="pointer"
 									mr="30px"
+
 								>
 									Meu Inestimável App
 								</Text>
 							</Link>
-
+						</Flex>
+						<Flex display={{ base: 'none', md: 'flex' }}>
 							<Link href="/about">
 								<Text
 									mr="8px"
@@ -116,7 +137,11 @@ function WithAction() {
 							</Link>
 
 							<Link href="/wasMade">
-								<Text color="#FFFFFF" cursor="pointer" marginLeft="12px">
+								<Text
+									color="#FFFFFF"
+									cursor="pointer"
+									marginLeft="12px"
+								>
 									Como foi feito
 								</Text>
 							</Link>
