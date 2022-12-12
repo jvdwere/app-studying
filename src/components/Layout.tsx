@@ -1,24 +1,10 @@
-import { Box, Container } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import Header from './Header';
 import React from 'react';
 
-interface ItemBreadcrumb {
-	isCurrentPage?: boolean;
-	to?: string;
-	title: string;
-}
 
-interface ILayout {
-	children: React.ReactNode | string | null | undefined;
-	breadcrumb?: ItemBreadcrumb[];
-	background?: string;
-	title?: string;
-	description?: string;
-	fullWidth?: boolean;
-	withMarginTop?: boolean;
-}
 
-function Layout({ children }: ILayout) {
+function Layout({ children }) {
 	return (
 		<>
 			<Header />
