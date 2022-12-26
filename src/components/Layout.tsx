@@ -12,7 +12,7 @@ function Layout({ children }) {
 				<Box background="#DDFFE7" h="100%" w="100%">
 					{children}
 				</Box>
-				<Box w="100%" p="8px" bgColor="#F9E5E1">
+				<Box textAlign='center' w="100%" p="8px" bgColor="#F9E5E1">
 					<footer>
 						<>&copy; Um dia eu fico bom.</>
 					</footer>
